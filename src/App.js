@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Todo_list from "./components/Todo_list";
+import Todolist from "./components/Todolist";
 
 class App extends Component {
+  constructor() {
+    super();
+    this.congViec = [
+      {title: 'di cho', isComplete: true},
+      {title: 'nau com', isComplete: true},
+      {title: 'giat quan ao', isComplete: false}
+    ];
+  }
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <Todo_list title="nau com" />
+          { this.congViec.map((e, i) => <Todolist key = { i } ds = { e }/>) }
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
