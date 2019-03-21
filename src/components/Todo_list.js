@@ -6,7 +6,7 @@ class Todo_list extends Component {
       <div className="todo_list">
         <ul>
           <li>Di cho</li>
-          <li>Nau com</li>
+          <li>{ this.props.title }</li>
         </ul>
       </div>
     );
