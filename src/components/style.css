@@ -1,5 +1,35 @@
-.todo_list_done {
-  text-decoration: line-through;
+.denxanh,
+.dendo,
+.denvang {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
   opacity: 0.5;
-  color: dodgerblue;
+  margin-top: 15px;
+}
+
+.cotden {
+  border: 2px solid dodgerblue;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+}
+
+.denxanh {
+  background: dodgerblue;
+}
+
+.dendo {
+  background: red;
+}
+
+.denvang {
+  background: yellow;
+}
+
+.active {
+  opacity: 1;
 }
