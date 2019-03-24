@@ -1,35 +1,31 @@
-.denxanh,
-.dendo,
-.denvang {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  opacity: 0.5;
-  margin-top: 15px;
+.active {
+  text-decoration: line-through;
+  color: white;
+  opacity: .8;
+  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
 }
 
-.cotden {
-  border: 2px solid dodgerblue;
-  width: 80px;
+li {
+  list-style: none;
+  font-family: serif;
+  font-size: 1.5em;
+  text-transform: capitalize;
+  border: 1px solid;
+  padding: 5px 0;
+  box-shadow: 0.2px 0.2px 1px #ccc;
+  border-radius: 1em;
+  cursor: pointer;
+}
+ul {
+  margin: 15px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding-bottom: 15px;
-}
-
-.denxanh {
-  background: dodgerblue;
-}
-
-.dendo {
-  background: red;
-}
-
-.denvang {
-  background: yellow;
-}
-
-.active {
-  opacity: 1;
 }

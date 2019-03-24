@@ -6,15 +6,29 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: ["di cho", "nau com", "rua bat"]
+      congViec: [
+        { name: "di cho", isComplete: false },
+        { name: "nau com", isComplete: false },
+        { name: "rua bat", isComplete: false }
+      ]
+    };
+  }
+  changeStatus(el) {
+    return () => {
+      let status = el.isComplete;
+      let job = [...this.state.congViec];
+      job.map(e => e.name === el.name && (e.isComplete = !status));
+      this.setState({
+        congViec: job
+      })
     };
   }
   render() {
     return (
       <div className="App">
-        {this.state.name.map((e,i) => 
-          <TodoList key={i} title={e} />
-        )}
+        {this.state.congViec.map((e, i) => (
+          <TodoList key={i} eventClick={this.changeStatus(e)} title={e} />
+        ))}
       </div>
     );
   }
