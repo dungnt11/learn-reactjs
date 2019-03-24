@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Todo_list from "./components/Todo_list";
+import TodoList from "./components/TodoList";
 
 class App extends Component {
   constructor() {
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         {this.state.name.map((e,i) => 
-          <Todo_list key={i} title={e} />
+          <TodoList key={i} title={e} />
         )}
       </div>
     );
