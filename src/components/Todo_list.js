@@ -2,11 +2,10 @@ import React, { Component } from "react";
 
 class Todo_list extends Component {
   render() {
-    const { name } = this.props.title
     return (
       <div className="todo_list">
         <ul>
-          <li>{ name }</li>
+          <li>{ this.props.title }</li>
         </ul>
       </div>
     );

@@ -6,13 +6,15 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      name: ['di cho', 'nau com', 'rua bat']
+      name: ["di cho", "nau com", "rua bat"]
     };
   }
   render() {
     return (
       <div className="App">
-        <Todo_list title={ this.state } />
+        {this.state.name.map((e,i) => 
+          <Todo_list key={i} title={e} />
+        )}
       </div>
     );
   }
