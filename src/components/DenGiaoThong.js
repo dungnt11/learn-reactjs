@@ -7,32 +7,10 @@ const BLUE = 0,
   YELLOW = 2;
 
 class DenGiaoThong extends Component {
-  constructor() {
-    super();
-    this.state = {
-      currentColor: BLUE
-    };
-    setInterval(() => {
-      this.setState({
-        currentColor: this.getNextColor(this.state.currentColor)
-      });
-    }, 1000);
-  }
-
-  getNextColor(color) {
-    switch (color) {
-      case BLUE:
-        return RED;
-      case RED:
-        return YELLOW;
-      default:
-        return BLUE;
-    }
-  }
   render() {
-    const { currentColor } = this.state
+    const { currentColor, onClick } = this.props
     return (
-      <div className="cotden">
+      <div onClick={onClick} className="cotden">
         <div className={ classNames('denxanh', {
           'active': currentColor === BLUE
         }) } />
